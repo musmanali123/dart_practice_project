@@ -32,19 +32,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: ListView.builder(
-        itemCount: 40,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            leading: Icon(Icons.person),
-            trailing: Icon(Icons.share),
-            title: Text("persons ${index + 1}"),
-          );
-        },
-      ),
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Center(
+            child: (Center(
+                // For Assets Image use Image.asset
+                child: Image.network(
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTZJrqP9fYtCuGu3HU2NMF4VM0U8Eu58t63ndFCiSX&s',
+          height: 500,
+          width: 500,
+          fit: BoxFit.contain,
+          color: Colors.greenAccent,
+          colorBlendMode: BlendMode.overlay,
+        )))));
   }
 }
