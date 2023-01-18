@@ -1,3 +1,4 @@
+import 'package:country_list_pick/country_list_pick.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,16 +36,28 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
-            child: (Center(
-                // For Assets Image use Image.asset
-                child: Image.network(
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTZJrqP9fYtCuGu3HU2NMF4VM0U8Eu58t63ndFCiSX&s',
-          height: 500,
-          width: 500,
-          fit: BoxFit.contain,
-          color: Colors.greenAccent,
-          colorBlendMode: BlendMode.overlay,
-        )))));
+        body: CountryListPick(
+          appBar: AppBar(
+            backgroundColor: Colors.amber,
+            title: const Text('Pick your country'),
+          ),
+          theme: CountryTheme(
+            isShowFlag: true,
+            isShowTitle: true,
+            isShowCode: true,
+            isDownIcon: true,
+            showEnglishName: true,
+            labelColor: Colors.blueAccent,
+          ),
+          initialSelection: '+44',
+          // or
+          // initialSelection: 'US'
+          // onChanged: (CountryCode code) {
+          //   // print(code.name);
+          //   // print(code.code);
+          //   // print(code.dialCode);
+          //   // print(code.flagUri);
+          // }
+        ));
   }
 }
