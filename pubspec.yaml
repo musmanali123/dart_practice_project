@@ -39,6 +39,7 @@ dependencies:
   country_list_pick: ^1.0.1+6
   fluttercontactpicker: ^4.7.0
   flutter_colorpicker: ^1.0.3
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +64,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/download.jpg
+    - assets/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
