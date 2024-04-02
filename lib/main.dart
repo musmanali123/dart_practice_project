@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter P_P',
+      title: 'Flutter Price',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors?.blue,
       ),
       home: const MyHomePage(title: 'Flutter_Practice_Project'),
     );
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super?.key, required this.title});
 
   final String title;
 
@@ -35,11 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text(widget?.title),
         ),
         body: CountryListPick(
           appBar: AppBar(
-            backgroundColor: Colors.amber,
+            backgroundColor: Colors?.amber,
             title: const Text('Pick your country'),
           ),
           theme: CountryTheme(
